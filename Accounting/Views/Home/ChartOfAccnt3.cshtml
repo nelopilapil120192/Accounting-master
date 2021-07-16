@@ -1,0 +1,223 @@
+﻿
+@{ Layout = null; }
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>Booking Application | Client Data Entry </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+
+	<style>
+
+
+		.templates {
+			display: none;
+		}
+
+		 input[type="text"] {
+			width: 100%;
+			padding: 8px 20px;
+			border: 1px solid gray;
+			border-radius: 5px;
+			margin: 8px 0;
+			box-sizing: border-box;
+		}
+
+		button {
+			border-radius: 8px;
+			background-color: #008CBA;
+			
+		}
+
+
+		ul {
+			background: rgba(255, 255, 255, 0.75);
+			width: 350px;
+			margin: 12px 0;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		.level1 {
+			border: 5px solid #f88;
+		}
+
+		.level2 {
+			border: 2px solid #8f8;
+		}
+
+		.level3 {
+			border: 2px solid #88f;
+		}
+
+		.level4 {
+			border: 2px solid black;
+		}
+
+		.level5 {
+			border: 2px solid yellow;
+		}
+
+		.level6 {
+			border: 2px solid pink;
+		}
+
+		.level7 {
+			border: 2px solid orange;
+		}
+
+		.level8 {
+			border: 2px solid violet;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="block-8">
+		<div class="shipping">
+
+			<h2> CHART OF ACCOUNT</h2>
+
+			<div class="wrapper">
+				<input type="button" id="AddParent"value="ADD" onclick="append(1);">
+			</div>
+			
+				<div class="templates" id="temp1">
+					<ul class="level1">
+						<li>
+							<input placeholder="parent">
+							<button >SAVE</button>
+							<button onclick="remove_div(this) ">DEL</button>
+							<button onclick="append(2, this)">ADD</button>
+						</li>
+					</ul>
+				</div>
+			
+			<div class="templates" id="temp2">
+				<ul class="level2">
+					<li>
+						<input placeholder="child">
+						<button>SAVE</button>
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(3, this)" disabled>ADD</button>
+
+					</li>
+				</ul>
+			</div>
+			<div class="templates" id="temp3">
+				<ul class="level3">
+					<li>
+						<input placeholder=this>
+						<button>SAVE</button>
+
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(4, this)" disabled>ADD</button>
+					</li>
+				</ul>
+			</div>
+			<div class="templates" id="temp4">
+				<ul class="level4">
+					<li>
+						<input placeholder=level>
+						<button>SAVE</button>
+
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(5, this)" disabled>ADD</button>
+					</li>
+				</ul>
+			</div>
+			<div class="templates" id="temp5">
+				<ul class="level5">
+					<li>
+						<input placeholder="sub-sub child">
+						<button>SAVE</button>
+
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(6, this)" disabled>ADD</button>
+					</li>
+				</ul>
+			</div>
+			<div class="templates" id="temp6">
+				<ul class="level6">
+					<li>
+						<input placeholder="sub-sub child">
+						<button>SAVE</button>
+
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(7, this)"disabled>ADD</button>
+					</li>
+				</ul>
+			</div>
+			<div class="templates" id="temp7">
+				<ul class="level7">
+					<li>
+						<input placeholder="sub-sub child">
+						<button>SAVE</button>
+
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(8, this)" disabled>ADD</button>
+					</li>
+				</ul>
+			</div>
+
+
+
+
+
+
+
+
+			<div class="templates" id="temp8">
+				<ul class="level8">
+					<li>
+						<input placeholder="sub-child">
+						<button>SAVE</button>
+
+						<button onclick="remove_div(this)">DEL</button>
+						<button onclick="append(9, this)">ADD</button>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function append(level, elm) {
+			if (!elm) elm = document.body;
+			else elm = elm.closest('ul');
+			var appended = document.querySelector('#temp' + level).children[0].cloneNode(true);
+			elm.appendChild(appended);
+
+			
+
+		}
+
+		function remove_div(button) {
+			var elm = button.closest("ul");
+			elm.parentNode.removeChild(elm);
+		}
+
+		function EnabledButton(level) {
+			const button = document.querySelector('#temp' + level);
+			button.disabled = false;
+		}
+
+
+
+
+	</script>
+</body>
+</html>
+
+
+

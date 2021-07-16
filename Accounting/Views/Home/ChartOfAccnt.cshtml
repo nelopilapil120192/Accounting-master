@@ -1,0 +1,216 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>Booking Application | Client Data Entry </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="~/Content/MainLayout/css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+	<!-- Custom CSS -->
+	<link href="~/Content/CreateBooking/css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- font-awesome icons CSS -->
+	<link href="~/Content/MainLayout/css/font-awesome.css" rel="stylesheet">	<!-- //font-awesome icons CSS-->
+	<!--webfonts-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="block-8">
+		<div class="shipping">
+
+			<br />
+			<h4> Chart of Account Data Entry </h4>
+
+
+			<div class="col-md-6 ship-1">
+				<p>GL Group Name</p>
+				<input list="" onchange="" name="" id="" type="text" />
+				<datalist id="">
+					<option data-value="">Assets</option>
+					<option data-value="">Liability</option>
+					<option data-value="">Stock Holder Equity</option>
+				</datalist>
+
+			</div>
+
+			<div class="col-md-3 ship-1">
+				<p>GL Group Code</p>
+				<input type="text" id="Cust_addr1">
+			</div>
+
+			<div class="clearfix"> </div>
+
+			<div class="col-md-6 ship-1">
+				<p>Sub-GL Group Name</p>
+				<input list="" onchange="" name="" id="" type="text" />
+				<datalist id="">
+					<option data-value="">Assets</option>
+					<option data-value="">Liability</option>
+					<option data-value="">Stock Holder Equity</option>
+				</datalist>
+
+			</div>
+
+			<div class="col-md-3 ship-1">
+				<p>Sub-GL Group Code</p>
+				<input type="text" id="Cust_addr1">
+			</div>
+
+
+			<div class="clearfix"> </div>
+
+			<div class="col-md-4 ship-1">
+				<p></p>
+				<button class="Button1 default " id="save" onclick="Save()">Save</button>
+				<div class="clearfix"> </div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<div class="block-8">
+		<div class="shipping">
+
+
+			<br />
+			<h4> SEGMENT SECTION </h4>
+
+			<div class="col-md-3 ship-1">
+				<button class="Button1 default " id="" onclick="createNewElement();">Add Parent ++</button>
+			</div>
+
+			<div class="clearfix"> </div>
+
+
+			<div class="col-md-3 ship-1">
+
+				@*<div id="SegName"></div>*@
+				<div style="display:inline">
+					<div id="SegCode"></div>
+					<div id="SegName"></div>
+					<label id="Add" style="color:blue" class="pointer" data-target="#ModalAddSubGL" data-toggle="modal" href="#ModalAddSubGL"><u>Add</u></label>
+					<label id="Edit" style="color:blue" class="pointer"><u>Edit</u></label>
+					<label id="Delete" style="color:blue" class="pointer"><u>Delete</u></label>
+
+
+				</div>
+			</div>
+
+			<div class="col-md-2 ship-1">
+
+				@*<div id="SegCode"></div>*@
+			</div>
+
+			<div class="col-md-1 ship-1">
+				<div id="SegAddChild"></div>
+				
+			</div>
+
+
+			<div class="clearfix"> </div>
+
+
+
+
+			<div class="col-md-2 ship-1">
+				<p></p>
+			</div>
+
+			<div class="col-md-3 ship-1">
+
+				<div id="SegNameChild"></div>
+			</div>
+
+			<div class="col-md-2 ship-1">
+
+				<div id="SegCodeChild"></div>
+			</div>
+
+
+
+			<div class="clearfix"> </div>
+
+
+
+
+		</div>
+
+	</div>
+
+	<div class="clearfix"> </div>
+
+
+
+	<script type="text/JavaScript">
+		var CurrentNumber = 0;
+
+		function createNewElement() {
+
+			CurrentNumber += 1;
+			// First create a DIV element.
+			var SegName = document.createElement('div');
+			var SegCode = document.createElement('div');
+			var SegAddChild = document.createElement('div');
+			var SegDeleteChild = document.createElement('div');
+			// Then add the content (a new input box) of the element.
+			SegName.innerHTML = "<input type='text' id='SegName " + CurrentNumber + "' placeholder='Segment name " + CurrentNumber + "'>";
+			SegCode.innerHTML = "<input type='text' id='SegCode " + CurrentNumber + "' placeholder='Segment code " + CurrentNumber + "'>";
+			SegAddChild.innerHTML = "<button class='Button1 default' id='ButtonAdd' onclick='createNewElementChild();' '>Add";
+			SegDeleteChild.innerHTML = "<button class='Button1 default' id='ButtonDelete'>Delete";
+
+			// Finally put it where it is supposed to appear.
+			document.getElementById("SegName").appendChild(SegName);
+			document.getElementById("SegCode").appendChild(SegCode);
+			document.getElementById("SegAddChild").appendChild(SegAddChild);
+			document.getElementById("SegDeleteChild").appendChild(SegDeleteChild);
+		}
+	</script>
+
+
+	<script type="text/JavaScript">
+		var CurrentNumber = 0;
+
+		function createNewElementChild() {
+
+			CurrentNumber += 1;
+			// First create a DIV element.
+			var SegNameChild = document.createElement('div');
+			var SegCodeChild = document.createElement('div');
+			var SegAddChild = document.createElement('div');
+			var SegDeleteChild = document.createElement('div');
+			// Then add the content (a new input box) of the element.
+			SegNameChild.innerHTML = "<input type='text' id='SegName " + CurrentNumber + "' placeholder='Segment name " + CurrentNumber + "'>";
+			SegCodeChild.innerHTML = "<input type='text' id='SegCode " + CurrentNumber + "' placeholder='Segment code " + CurrentNumber + "'>";
+			SegAddChild.innerHTML = "<button class='Button1 default' id='ButtonAdd' onclick='createNewElementChild();'>Add";
+			SegDeleteChild.innerHTML = "<button class='Button1 default' id='ButtonDelete'>Delete";
+
+			// Finally put it where it is supposed to appear.
+			document.getElementById("SegNameChild").appendChild(SegNameChild);
+			document.getElementById("SegCodeChild").appendChild(SegCodeChild);
+			document.getElementById("SegAddChild").appendChild(SegAddChild);
+			document.getElementById("SegDeleteChild").appendChild(SegDeleteChild);
+		}
+	</script>
+
+
+
+
+
+
+
+</body>
+</html >
+
+
+

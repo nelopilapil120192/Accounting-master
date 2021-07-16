@@ -1,0 +1,421 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>Booking Application | Client Data Entry </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+	<!-- Custom CSS -->
+	<link href="~/Content/CreateBooking/css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- font-awesome icons CSS -->
+	<link href="~/Content/MainLayout/css/font-awesome.css" rel="stylesheet">	<!-- //font-awesome icons CSS-->
+	<!--webfonts-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+
+
+
+	<script>
+		$(document).ready(function () {
+			function alignModal() {
+				var modalDialog = $(this).find(".modal-dialog");
+
+				// Applying the top margin on modal dialog to align it vertically center
+				modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+			}
+			// Align modal when it is displayed
+			$(".modal").on("shown.bs.modal", alignModal);
+
+			// Align modal when user resize the window
+			$(window).on("resize", function () {
+				$(".modal:visible").each(alignModal);
+			});
+		});
+	</script>
+
+
+
+
+
+	<script>
+		var GlobalSubGrpName;
+
+	</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+	<div class="block-8">
+		@*<div class="shipping">
+
+			<br />
+			<h4> Chart of Account Data Entry </h4>
+
+			<br />
+			<br />
+			<h4> Add Group Ledger </h4>
+
+			<div class="col-md-3 ship-1">
+				<p>GL Group Name</p>
+				<input type="text" id="GLGrpName">
+			</div>
+
+			<div class="col-md-2 ship-1">
+				<p>GL Group Code</p>
+				<input type="text" id="Cust_addr1">
+				<button class="Button1 default " >add</button>
+			</div>
+
+			<div class="col-md-3 ship-1">
+				<button class="Button1 default " >add</button>
+			</div>
+
+
+			<div class="clearfix"> </div>
+
+
+		</div>*@
+	</div>
+
+	<br />
+
+
+
+
+	<div class="block-8">
+		<div class="shipping">
+
+
+			<h4> Modify Group Ledger </h4>
+
+
+
+			<button class="Button1 default ">add</button>
+
+			<div class="clearfix"> </div>
+			@* ================================ ASSET =========================================== *@
+			<div class="col-md-6 ship-1">
+
+				<div style="display:inline">
+					<label id="COAAsset" value="Asset">• ASSET : </label>
+
+					<label id="Add" style="color:blue" class="pointer" data-target="#ModalAddSubGL" data-toggle="modal" href="#ModalAddSubGL"><u>Add</u></label>
+					<label id="Edit" style="color:blue" class="pointer"><u>Edit</u></label>
+					<label id="Delete" style="color:blue" class="pointer"><u>Delete</u></label>
+
+
+				</div>
+
+			</div>
+
+
+			<div class="clearfix"> </div>
+
+			@*<div class="col-xs-1 ship-1">
+			<p></p>
+		</div>*@
+			@*<div class="col-md-4 ship-1">*@
+			<div id="lblSubGrpNameFromHTML"></div>
+			@*<label id="lblSubGrpNameasd"></label>*@
+
+			@*</div>*@
+			<div class="clearfix"> </div>
+
+
+
+
+
+
+
+			@* ================================= LIABILITY =========================================== *@
+
+
+
+			<div class="col-md-9 ship-1">
+
+				<div style="display:inline">
+					<label id="COALiability" value="Liability">• LIABILITY : </label>
+
+					<label id="Add" style="color:blue" class="pointer"><u>Add</u></label>
+					<label id="Edit" style="color:blue" class="pointer"><u>Edit</u></label>
+					<label id="Delete" style="color:blue" class="pointer"><u>Delete</u></label>
+				</div>
+
+			</div>
+
+
+			@* ================================= STOCK HOLDERS EQUITY =========================================== *@
+
+
+
+			<div class="col-md-6 ship-1">
+
+				<div style="display:inline">
+					<label id="COAStockHolderEquity" value="StockHolderEquity">• STOCK HOLDER EQUITY : </label>
+
+					<label id="ModalAddEdit" style="color:blue" class="pointer"><u>Add</u></label>
+					<label id="Edit" style="color:blue" class="pointer"><u>Edit</u></label>
+					<label id="Delete" style="color:blue" class="pointer"><u>Delete</u></label>
+				</div>
+
+			</div>
+
+
+
+
+			<div class="clearfix"> </div>
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+	<div id="ModalAddSubGL" class="modal">
+		<div class="modal-dialog modal-m">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Add Sub Group Ledger</h4>
+				</div>
+				<div class="modal-body">
+
+
+					<div class="col-md-6 ship-1">
+						<p>Sub-GL Name</p>
+
+						<input type="text" id="txtSubGLName" />
+					</div>
+
+
+					<div class="col-md-3 ship-1">
+						<p>Sub-GL Code</p>
+						<input type="text" />
+					</div>
+
+					<div class="clearfix"> </div>
+
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-dismiss="modal" onclick="CreateSubGL() ;">
+						Save & Close
+					</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div id="ModalAddSubChild" class="modal">
+		<div class="modal-dialog modal-m">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Add Sub Child</h4>
+				</div>
+				<div class="modal-body">
+
+
+					<div class="col-md-6 ship-1">
+						<p>SubChild Name</p>
+
+						<input type="text" id="txtChildName" />
+					</div>
+
+
+					<div class="col-md-3 ship-1">
+						<p>SubChild Code</p>
+						<input type="text" />
+					</div>
+
+					<div class="clearfix"> </div>
+
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-dismiss="modal" onclick="CreateSubChild() ;">
+						Save & Close
+					</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div id="ModalEdit" class="modal">
+		<div class="modal-dialog modal-m">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Edit Sub Group Ledger</h4>
+				</div>
+				<div class="modal-body">
+
+
+					<div class="col-md-6 ship-1">
+						<p>Sub-GL Name</p>
+						<input type="text" />
+					</div>
+
+
+					<div class="col-md-3 ship-1">
+						<p>Sub-GL Code</p>
+						<input type="text" />
+					</div>
+
+					<div class="clearfix"> </div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" @*data-dismiss="modal"*@>
+						Save & Close
+					</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/JavaScript">
+		var x = null;
+		var count = 1;
+		var CurrentLblView = null;
+
+		function CreateSubGL() {
+
+
+			var SubGLName = document.createElement('div');
+
+			/// KINUKUHA NITO VALUE NG TEXTBOX SA MODAL
+			var x = document.getElementById("txtSubGLName").value;
+
+
+			//
+
+
+			///ITO GUMAGWA NG DESIGN DYNAMICALLY
+			//SubGLName.innerHTML = " <div style='display: inline'> <label> • <label id='lblSubGrpName" + x + "'></label> : </label>  <label id='Add' style ='color:blue' class='pointer'><u>Add</u></label> <label id='Edit' style='color:blue' class='pointer'><u>Edit</u></label>  <label id='Delete' style='color:blue' class='pointer'><u>Delete</u></label>	</div > ";
+			SubGLName.innerHTML = " <div class='col-md-1 ship-1'> <p></p> </div> <div class='col-md-4 ship-1'> <div style='display: inline'> <label> • <label id='lblSubGrpName" + x + "'></label> : </label>  <label id='Add' style ='color:blue' class='pointer' data-target='#ModalAddSubChild' data-toggle='modal' href='#ModalAddSubChild'><u>Add</u></label> <label id='Edit' style='color:blue' class='pointer'><u>Edit</u></label>  <label id='Delete' style='color:blue' class='pointer'><u>Delete</u></label>	</div > </div > 	<div class='clearfix'> </div>  <div class='col-md-2 ship-1'> <p></p> </div>   <div class='col-md-4 ship-1'> <div id='lblSubChildName" + x + "'></div>   </div>  <div class='clearfix'> </div>  ";
+
+
+			if (count == 1) {
+				// CHANGE THE ID OF DISPLAY LABEL IN HTML
+				document.getElementById("lblSubGrpNameFromHTML").id = "lblSubGrpName-" + x;
+				count = 2;
+				CurrentLblView = "lblSubGrpName-" + x;
+			} else {
+				document.getElementById(CurrentLblView).id = "lblSubGrpName-" + x;
+				CurrentLblView = "lblSubGrpName-" + x;
+			}
+
+
+			//// Finally put it where it is supposed to appear.
+			//document.getElementById("lblSubGrpName-" + x).appendChild(SubGLName);
+
+
+			//	Finally put it where it is supposed to appear.
+			document.getElementById(CurrentLblView).appendChild(SubGLName);
+
+
+
+			//document.getElementById("lblSubGLName").innerHTML =  + "test";
+			//document.getElementById("asd'" + CurrentNumber + "'", "asd1").innerHTML = "asd";
+			document.getElementById("lblSubGrpName" + x).innerHTML = x;
+
+
+		}
+
+
+
+
+
+		function CreateSubChild() {
+		
+			var SubChildName = document.createElement('div');
+
+			/// KINUKUHA NITO VALUE NG TEXTBOX SA MODAL
+			var x = document.getElementById("txtChildName").value;
+
+
+			//
+
+
+			///ITO GUMAGWA NG DESIGN DYNAMICALLY
+			//SubGLName.innerHTML = " <div style='display: inline'> <label> • <label id='lblSubGrpName" + x + "'></label> : </label>  <label id='Add' style ='color:blue' class='pointer'><u>Add</u></label> <label id='Edit' style='color:blue' class='pointer'><u>Edit</u></label>  <label id='Delete' style='color:blue' class='pointer'><u>Delete</u></label>	</div > ";
+			SubChildName.innerHTML = " <div class='col-md-1 ship-1'> <p></p> </div> <div class='col-md-4 ship-1'> <div style='display: inline'> <label> • <label id='lblChildName" + x + "'></label> : </label>  <label id='Add' style ='color:blue' class='pointer'><u>Add</u></label> <label id='Edit' style='color:blue' class='pointer'><u>Edit</u></label>  <label id='Delete' style='color:blue' class='pointer'><u>Delete</u></label>	</div > </div > 	<div class='clearfix'> </div>  ";
+
+			CurrentLblView = "lblSubChildName" + x;
+
+			//	Finally put it where it is supposed to appear.
+			document.getElementById(CurrentLblView).appendChild(SubChildName);
+
+
+
+			//document.getElementById("lblSubGLName").innerHTML =  + "test";
+			//document.getElementById("asd'" + CurrentNumber + "'", "asd1").innerHTML = "asd";
+			document.getElementById("lblChildName" + x).innerHTML = x;
+
+
+		}
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+</body>
+</html >
+
+
+

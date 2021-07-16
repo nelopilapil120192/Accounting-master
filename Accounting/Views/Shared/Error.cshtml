@@ -1,0 +1,27 @@
+﻿@using System.Threading;
+@using System.Security.Claims;
+
+
+	@*<meta name="viewport" content="width=device-width" />*@
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	@{
+		var Myidentity = (ClaimsPrincipal)Thread.CurrentPrincipal;
+		if (!Myidentity.Identity.IsAuthenticated) {
+			Layout = null;
+		}
+
+	}
+
+
+<body>
+	<hgroup>
+		<h1>Error.</h1>
+		<h2>An error occurred while processing your request.</h2>
+		<div class="">
+			<h2 class="error-message">@(String.IsNullOrWhiteSpace(ViewBag.Message) ? Booking.Properties.ExceptionStrings.AnErrorOccured : ViewBag.Message)</h2>
+		</div>
+	</hgroup>
+</body>
+</html>

@@ -1,0 +1,270 @@
+
+html, body {
+	font-family: 'Sintony', sans-serif;
+	font-size: 100%;
+}
+
+
+.pointer {
+	cursor: pointer;
+}
+
+.contact-info1 p {
+	font-size: 1em;
+	color: #000000;
+	margin: 0.5em 0em;
+}
+
+.contact-info1 input[type="text"] {
+	width: 100%;
+	padding: 8px 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+.contact-info1 input[type="datetime-local"] {
+	width: 100%;
+	padding: 8px 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+
+/*--block-8 strat here--*/
+.block-8 {
+	/*width :inherit*/ /*;*/
+	background: #fff;
+	padding: 1.5em 0.5em;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+.shipping h4 {
+	font-size: 1.2em;
+	color: #000;
+	font-weight: 700;
+	margin: 0em 0em 1em 0.7em;
+}
+
+
+
+
+	.ship-1 input[type="text"] {
+		width: 100%;
+		padding: 8px 20px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+
+.ship-1 input[type="datetime-local"] {
+	width: 100%;
+	padding: 0px 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+
+
+.ship-1 input[type="number"] {
+	width: 100%;
+	padding: 8px 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	text-align: right;
+}
+
+
+
+	select.drpdwnlist, select.country {
+		width: 100%;
+		/*	padding: 1em;*/ padding: 8px 20px;
+		border: 1px solid gray;
+		border-color: black;
+		border-radius: 5px;
+		outline: none;
+		margin: 8px 0;
+		font-size: 15px;
+		font-weight: 300;
+		color: black;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+	/*--contact info start here--*/
+	.contact-info {
+		margin-top: 2.5em;
+	}
+
+
+
+
+
+.content-table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.8em;
+	min-width: 400px;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+	.content-table thead tr {
+		background-color: #d4573f;
+		color: #ffffff;
+		text-align: left;
+		font-weight: bold;
+	}
+
+	.content-table th,
+	.content-table td {
+		padding: 12px 15px;
+	}
+
+	.content-table tbody tr {
+		border-bottom: 1px solid #dddddd;
+	}
+
+	.content-table tbody a {
+		color: #0000FF;
+	}
+
+	.content-table tbody tr:nth-of-type(even) {
+		background-color: #f3f3f3;
+	}
+
+	.content-table tbody tr:last-of-type {
+		border-bottom: 2px solid #009879;
+	}
+
+	.content-table tbody tr.active-row {
+		font-weight: bold;
+		color: #009879;
+	}
+
+
+
+
+/*
+	* {
+		font-family: sans-serif;  Change your font family 
+	}
+
+	.content-tablecont {
+		border-collapse: collapse;
+		margin: 25px 0;
+		font-size: 0.8em;
+		min-width: 300px;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+
+		.content-tablecont thead tr {
+			background-color: #009879;
+			color: #ffffff;
+			text-align: left;
+			font-weight: bold;
+		}
+
+		.content-tablecont th,
+		.content-tablecont td {
+			padding: 10px 13px;
+		}
+
+		.content-tablecont tbody tr {
+			border-bottom: 1px solid #dddddd;
+		}
+
+			.content-tablecont tbody tr:nth-of-type(even) {
+				background-color: #f3f3f3;
+			}
+
+			.content-tablecont tbody tr:last-of-type {
+				border-bottom: 2px solid #009879;
+			}
+
+			.content-tablecont tbody tr.active-row {
+				font-weight: bold;
+				color: #009879;
+			}
+*/
+
+
+
+	.Button1 {
+		border: 2px solid black;
+		border-radius: 20px;
+		background-color: white;
+		color: black;
+		padding: 10px 24px;
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+	.default {
+		border-color: #4CAF50;
+		color: green;
+	}
+
+		.default:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+	.info {
+		border-color: #2196F3;
+		color: dodgerblue
+	}
+
+		.info:hover {
+			background: #2196F3;
+			color: white;
+		}
+	/* Orange */
+	.warning {
+		border-color: #ff9800;
+		color: orange;
+	}
+
+		.warning:hover {
+			background: #ff9800;
+			color: white;
+		}
+	/* Red */
+	.danger {
+		border-color: #f44336;
+		color: red
+	}
+
+		.danger:hover {
+			background: #f44336;
+			color: white;
+		}
+
+
+
+
+
+
+input:invalid {
+	border: 2px dashed red;
+}
+
+	input:invalid:required {
+		border-color: #f44336;
+		
+	}
+
+/*input:valid {
+	border: 2px solid black;
+}*/
